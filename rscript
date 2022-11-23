@@ -3,7 +3,7 @@ library(seewave)
 library(caTools)
 library(warbleR)
 
-setwd("C:/Users/Asus/Downloads/4702 project/GenderRecognizer/Projectvoicelines/")
+setwd("--VOICE FILE DIRECTORY")
 r <- tuneR::readWave(file.path(getwd(), "imtihan3.wav"), units = "seconds")
 
 songspec <- seewave::spec(r, f = r@samp.rate, plot = FALSE)
