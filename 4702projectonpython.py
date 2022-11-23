@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 
-voice = pd.read_csv('C:/Users/Asus/Downloads/4702 project/GenderRecognizer/voice.csv')
+voice = pd.read_csv('/voice.csv')
 
 label_encode = LabelEncoder()
 voice['label'] = label_encode.fit_transform(voice['label'])
@@ -70,7 +70,7 @@ print('f1-score:', f1_score(testy,y_pred_knn))
 print("KNN Model Classification Report")
 print(classification_report(testy, y_pred_knn))
 
-vuic = pd.read_csv('C:/Users/Asus/Downloads/4702 project/GenderRecognizer/testvoice.csv')
+vuic = pd.read_csv('/testvoice.csv')
 vuic_X = vuic[selected_features]
 
 y_svm = suppvec.predict(vuic_X)
